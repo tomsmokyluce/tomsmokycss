@@ -589,7 +589,7 @@ img[src*="caveunused.jpg"] {
 img[src*="cavedefault.jpg"],
 img[src*="caveunused.jpg"] {
     width: 300px !important;
-    height: 150px !important;
+    height: 100px !important;
     object-fit: cover !important;
     object-position: center !important;
     display: block;
