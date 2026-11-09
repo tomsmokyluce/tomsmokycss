@@ -584,3 +584,17 @@ button:focus {
 .ig-archive-links a:hover {
     background: rgba(170, 188, 201, 0.2);
 }
+
+/* ==================================
+   IMPERIUM — CAVE IMAGE REPLACEMENTS
+================================== */
+
+/* THE TARPEIAN HILL */
+img[src*="cavedefault.jpg"] {
+    content: url("https://taintedgrail.wiki.gg/images/thumb/PLACES-Cave_By_The_Cliff%281%29.png/300px-PLACES-Cave_By_The_Cliff%281%29.png?ca29c1") !important;
+}
+
+/* ALL OTHER CAVES */
+img[src*="caveunused.jpg"] {
+    content: url("https://images.stockcake.com/public/6/c/7/6c7f80fb-d4bc-44a1-9c44-636cf20e3cb8_large/snowy-cave-entrance-stockcake.jpg") !important;
+}
