@@ -484,3 +484,103 @@ button:focus {
 /* =========================================================
    END OF IMPERIUM GLACIALIS
    ========================================================= */
+
+/* ==================================
+   IMPERIUM — LORE BOX
+================================== */
+
+.ig-lore {
+    background: rgba(25, 38, 50, 0.92);
+    border: 1px solid #aabcc9;
+    padding: 22px;
+    margin: 25px auto;
+    color: #edf2f5;
+    text-align: center;
+}
+
+.ig-lore .ig-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 27px;
+    letter-spacing: 5px;
+    color: #d2dce4;
+    margin-bottom: 5px;
+}
+
+.ig-lore .ig-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #aabcc9;
+}
+
+.ig-lore .ig-scrollbox {
+    max-height: 260px;
+    overflow-y: auto;
+    padding: 18px;
+    margin-top: 18px;
+    text-align: left;
+    background: rgba(8, 17, 26, 0.55);
+    border: 1px solid #536675;
+}
+
+.ig-lore .ig-scrollbox h3 {
+    font-family: 'Cinzel', serif;
+    color: #c5d5e0;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #536675;
+    padding-bottom: 6px;
+}
+
+/* ==================================
+   IMPERIUM — ARCHIVES DROPDOWN
+================================== */
+
+.ig-archives {
+    background: rgba(25, 38, 50, 0.92);
+    border: 1px solid #758fa2;
+    margin: 18px auto;
+    color: #edf2f5;
+}
+
+.ig-archives summary {
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+    padding: 14px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+    color: #d2dce4;
+}
+
+.ig-archives summary::-webkit-details-marker {
+    display: none;
+}
+
+.ig-archives summary::after {
+    content: " +";
+    color: #aabcc9;
+}
+
+.ig-archives[open] summary::after {
+    content: " −";
+}
+
+.ig-archive-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px;
+    border-top: 1px solid #536675;
+}
+
+.ig-archive-links a {
+    color: #d2dce4;
+    text-decoration: none;
+    padding: 7px 12px;
+    border: 1px solid #536675;
+}
+
+.ig-archive-links a:hover {
+    background: rgba(170, 188, 201, 0.2);
+}
