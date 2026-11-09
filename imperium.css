@@ -1,0 +1,486 @@
+/* =========================================================
+   IMPERIUM GLACIALIS
+   Aeonium's Den — Lioden custom stylesheet
+   Version 1.0
+
+   Upload this file to the ROOT of your public GitHub Pages
+   repository. Keep the filename: imperium.css
+
+   Notes:
+   - This stylesheet skins existing Lioden page elements.
+   - It does not replace Lioden's built-in sections or functions.
+   - Some selectors may need adjustment if Lioden changes its
+     page markup or if a particular section uses different
+     classes.
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. FONTS
+   --------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+
+/* ---------------------------------------------------------
+   2. COLOUR PALETTE
+   --------------------------------------------------------- */
+
+:root {
+    --ig-white: #edf2f5;
+    --ig-ivory: #e2e9ee;
+    --ig-frost: #d2dce4;
+    --ig-ice: #aec2d0;
+    --ig-blue: #8199aa;
+    --ig-slate: #586d7d;
+    --ig-deep: #344451;
+    --ig-night: #263541;
+
+    --ig-page: rgba(34, 47, 59, 0.94);
+    --ig-panel: rgba(42, 57, 70, 0.92);
+    --ig-panel-alt: rgba(75, 94, 109, 0.86);
+    --ig-panel-soft: rgba(126, 151, 169, 0.18);
+
+    --ig-border: rgba(195, 214, 227, 0.52);
+    --ig-border-soft: rgba(195, 214, 227, 0.28);
+    --ig-shadow: rgba(0, 0, 0, 0.32);
+}
+
+
+/* ---------------------------------------------------------
+   3. PAGE BACKGROUND AND DEFAULT TEXT
+   --------------------------------------------------------- */
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-color: var(--ig-night) !important;
+    background-image: url("https://images.pexels.com/photos/30729293/pexels-photo-30729293.jpeg?cs=srgb&dl=pexels-jacobmooreimages-30729293.jpg&fm=jpg") !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+
+    color: var(--ig-white) !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+
+/* ---------------------------------------------------------
+   4. MAIN PAGE CONTAINER
+   --------------------------------------------------------- */
+
+.container.main {
+    background: var(--ig-page) !important;
+    border: 1px solid var(--ig-border) !important;
+    box-shadow: 0 8px 28px var(--ig-shadow) !important;
+}
+
+.col-md-9,
+.col-md-3 {
+    background: transparent !important;
+}
+
+
+/* ---------------------------------------------------------
+   5. TYPOGRAPHY
+   --------------------------------------------------------- */
+
+body,
+p,
+td,
+th,
+label,
+small {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Cinzel', Georgia, serif !important;
+    color: var(--ig-white) !important;
+    letter-spacing: 1.5px;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.22);
+}
+
+h1 {
+    letter-spacing: 3px;
+}
+
+h3 {
+    color: var(--ig-ice) !important;
+    letter-spacing: 2px;
+}
+
+
+/* ---------------------------------------------------------
+   6. TOP BAR AND NAVIGATION
+   --------------------------------------------------------- */
+
+.topbar {
+    background: rgba(34, 47, 59, 0.97) !important;
+    border: 1px solid var(--ig-border) !important;
+    color: var(--ig-white) !important;
+}
+
+.navbar {
+    background: rgba(53, 70, 84, 0.97) !important;
+    border-color: var(--ig-border) !important;
+}
+
+.navbar li a {
+    color: var(--ig-white) !important;
+    font-family: 'Cinzel', Georgia, serif !important;
+    font-size: 11px;
+    letter-spacing: 0.7px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar li a:hover,
+.navbar li a:focus {
+    background: rgba(174, 194, 208, 0.20) !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   7. BREADCRUMB
+   --------------------------------------------------------- */
+
+.breadcrumb {
+    background: rgba(126, 151, 169, 0.14) !important;
+    border: 1px solid var(--ig-border-soft) !important;
+    color: var(--ig-frost) !important;
+}
+
+.breadcrumb > li,
+.breadcrumb > li + li:before,
+.breadcrumb .active {
+    color: var(--ig-frost) !important;
+}
+
+
+/* ---------------------------------------------------------
+   8. LINKS
+   --------------------------------------------------------- */
+
+a {
+    color: var(--ig-ice) !important;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    text-shadow: 0 0 7px rgba(210, 225, 235, 0.35);
+}
+
+
+/* ---------------------------------------------------------
+   9. PANELS AND PANEL HEADINGS
+   --------------------------------------------------------- */
+
+.panel {
+    background: var(--ig-panel) !important;
+    border: 1px solid var(--ig-border) !important;
+    border-radius: 2px !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16) !important;
+}
+
+.panel-heading {
+    background: var(--ig-panel-alt) !important;
+    border-color: var(--ig-border-soft) !important;
+    color: var(--ig-white) !important;
+    font-family: 'Cinzel', Georgia, serif !important;
+    letter-spacing: 1px;
+}
+
+.panel-body {
+    color: var(--ig-white) !important;
+}
+
+.panel-footer {
+    background: rgba(38, 53, 65, 0.92) !important;
+    border-color: var(--ig-border-soft) !important;
+    color: var(--ig-frost) !important;
+}
+
+
+/* ---------------------------------------------------------
+   10. TABLES AND EXISTING INFORMATION SECTIONS
+   --------------------------------------------------------- */
+
+.table {
+    color: var(--ig-white) !important;
+    border-color: var(--ig-border-soft) !important;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th {
+    background: rgba(83, 105, 122, 0.92) !important;
+    border-color: var(--ig-border-soft) !important;
+    color: var(--ig-white) !important;
+}
+
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    border-color: var(--ig-border-soft) !important;
+    color: var(--ig-white) !important;
+}
+
+/* Common Lioden table cell classes */
+.top,
+.bottom,
+th {
+    background: rgba(83, 105, 122, 0.92) !important;
+    border-color: var(--ig-border-soft) !important;
+    color: var(--ig-white) !important;
+}
+
+.inner-table .left,
+.table .left {
+    background: rgba(74, 94, 111, 0.88) !important;
+    border-color: var(--ig-border-soft) !important;
+    color: var(--ig-white) !important;
+}
+
+.inner-table .right,
+.table .right {
+    background: rgba(42, 57, 70, 0.88) !important;
+    border-color: var(--ig-border-soft) !important;
+    color: var(--ig-frost) !important;
+}
+
+.right_odd {
+    background: rgba(88, 108, 124, 0.40) !important;
+}
+
+.right_cub {
+    background: rgba(115, 137, 153, 0.34) !important;
+}
+
+
+/* ---------------------------------------------------------
+   11. ACCOUNT / PLAYER INFORMATION
+   --------------------------------------------------------- */
+
+div.left {
+    color: var(--ig-white) !important;
+}
+
+
+/* ---------------------------------------------------------
+   12. FORMS AND INPUTS
+   --------------------------------------------------------- */
+
+input,
+select,
+textarea {
+    background-color: rgba(31, 44, 55, 0.94) !important;
+    border: 1px solid var(--ig-border) !important;
+    color: var(--ig-white) !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--ig-ice) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(174, 194, 208, 0.15) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #b8c6d0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   13. BUTTONS
+   --------------------------------------------------------- */
+
+.btn,
+button {
+    background: rgba(79, 101, 119, 0.96) !important;
+    border: 1px solid var(--ig-border) !important;
+    border-radius: 2px !important;
+    color: var(--ig-white) !important;
+    font-family: 'Cinzel', Georgia, serif !important;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus,
+button:hover,
+button:focus {
+    background: rgba(117, 143, 162, 0.98) !important;
+    border-color: var(--ig-white) !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   14. ALERTS AND NOTIFICATIONS
+   --------------------------------------------------------- */
+
+.alert {
+    background: rgba(68, 88, 105, 0.94) !important;
+    border: 1px solid var(--ig-border) !important;
+    color: var(--ig-white) !important;
+}
+
+.alert a {
+    color: #ffffff !important;
+}
+
+.alert-warning,
+.alert-danger,
+.alert-success,
+.alert-info {
+    color: var(--ig-white) !important;
+}
+
+
+/* ---------------------------------------------------------
+   15. CUSTOM SCROLLBARS
+   Affects scrollable elements and browser page where supported.
+   --------------------------------------------------------- */
+
+* {
+    scrollbar-color: #8da5b6 #263541;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #263541;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8199aa;
+    border: 1px solid #344451;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b5c7d3;
+}
+
+
+/* ---------------------------------------------------------
+   16. OPTIONAL CUSTOM BOX CLASSES
+   These only style elements if you later add the matching
+   classes to your Territory Description HTML.
+   --------------------------------------------------------- */
+
+.ig-content {
+    max-width: 850px;
+    margin: 18px auto;
+}
+
+.ig-box {
+    background: rgba(37, 51, 64, 0.91);
+    border: 1px solid var(--ig-border);
+    padding: 22px;
+    margin: 16px auto;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.24);
+}
+
+.ig-title {
+    color: var(--ig-white);
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.ig-heading {
+    color: var(--ig-ice);
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ig-subtitle {
+    color: var(--ig-blue);
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ig-divider {
+    width: 65%;
+    margin: 16px auto;
+    border: 0;
+    border-top: 1px solid var(--ig-border);
+}
+
+.ig-caption {
+    color: var(--ig-frost);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.65;
+    text-align: center;
+}
+
+.ig-scrollbox {
+    max-height: 240px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 14px 18px;
+    background: rgba(30, 43, 54, 0.78);
+    border: 1px solid var(--ig-border-soft);
+}
+
+
+/* ---------------------------------------------------------
+   17. SMALL SCREEN SAFETY
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+    body {
+        background-attachment: scroll !important;
+    }
+
+    .container.main {
+        width: 100% !important;
+    }
+
+    .ig-box {
+        padding: 15px;
+    }
+
+    .ig-title {
+        font-size: 21px;
+    }
+}
+
+
+/* =========================================================
+   END OF IMPERIUM GLACIALIS
+   ========================================================= */
