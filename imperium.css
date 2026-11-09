@@ -598,3 +598,12 @@ img[src*="cavedefault.jpg"] {
 img[src*="caveunused.jpg"] {
     content: url("https://images.stockcake.com/public/6/c/7/6c7f80fb-d4bc-44a1-9c44-636cf20e3cb8_large/snowy-cave-entrance-stockcake.jpg") !important;
 }
+/* Keep all cave images in Lioden's standard image frame */
+img[src*="cavedefault.jpg"],
+img[src*="caveunused.jpg"] {
+    width: 300px !important;
+    height: 150px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block;
+}
